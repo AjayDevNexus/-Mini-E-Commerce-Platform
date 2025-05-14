@@ -18,13 +18,13 @@ require('dotenv').config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  // No SSL needed for internal Render connections
+  
 });
 
 pool.connect()
   .then(client => {
     console.log("Connected to database...");
-    client.release(); // release connection back to pool
+   
   })
   .catch(err => {
     console.error("Database connection error:", err.stack);
