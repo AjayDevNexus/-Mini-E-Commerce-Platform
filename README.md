@@ -53,6 +53,15 @@ CREATE TABLE products (
   image_url VARCHAR(255)
 );
 ```
+### 🛡️ Backend .env Example
+### Create a file named `.env` inside the server directory and add the following:
+```env
+DB_USER=postgres
+DB_HOST=localhost
+DB_NAME=ecommerce
+DB_PASSWORD=your_password
+DB_PORT=5432
+```
 ### Run
 ```bash
 nodemon server.js
@@ -72,17 +81,6 @@ Install with:
 npm install axios
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
-```
-### 🛡️ Backend .env Example
-
-### Create a file named `.env` inside the server directory and add the following:
-
-```env
-DB_USER=postgres
-DB_HOST=localhost
-DB_NAME=ecommerce
-DB_PASSWORD=your_password
-DB_PORT=5432
 ```
 ## RUN
 ```
