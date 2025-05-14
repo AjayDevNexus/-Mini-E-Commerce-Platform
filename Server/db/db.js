@@ -1,4 +1,5 @@
-const { Pool } = require('pg');
+//Local running use comment code
+/* const { Pool } = require('pg');
 require('dotenv').config(); 
 console.log(typeof(process.env.PASSWORD))
 const pool = new Pool({
@@ -9,5 +10,21 @@ const pool = new Pool({
   port: process.env.PORT,
 });
 console.log("connected....to db")
+module.exports = pool;
+*/
+//Render deploymeny
+const { Pool } = require('pg');
+require('dotenv').config(); 
+
+// Use the DATABASE_URL environment variable
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, 
+  }
+});
+
+console.log("connected....to db");
+
 module.exports = pool;
 
