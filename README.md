@@ -67,8 +67,15 @@ DB_PORT=5432
 nodemon server.js
 ```
 ## 3. Frontend
-### 📦 Required Frontend Dependencies
+### 🏁 Getting Started
 
+### 1. Create a new React app (command prompt)
+
+```bash
+npx create-react-app client
+cd client
+```
+### 📦 Required Frontend Dependencies
 - react
 - axios
 - tailwindcss
@@ -86,3 +93,4 @@ npx tailwindcss init -p
 ```
 npm start
 ```
+
