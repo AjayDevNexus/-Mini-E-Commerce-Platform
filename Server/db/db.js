@@ -14,17 +14,21 @@ module.exports = pool;
 */
 //Render deploymeny
 const { Pool } = require('pg');
-require('dotenv').config(); 
+require('dotenv').config();
 
-// Use the DATABASE_URL environment variable
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false, 
-  }
+  // No SSL needed for internal Render connections
 });
 
-console.log("connected....to db");
+pool.connect()
+  .then(client => {
+    console.log("Connected to database...");
+    client.release(); // release connection back to pool
+  })
+  .catch(err => {
+    console.error("Database connection error:", err.stack);
+  });
 
 module.exports = pool;
 
