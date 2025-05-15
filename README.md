@@ -93,4 +93,13 @@ npx tailwindcss init -p
 ```
 npm start
 ```
+## ⚠️ Note on Deployment Delay
+
+Please note that the deployed version of this app may take **10–20 seconds** to load on the **first request**. This delay is due to the limitations of the **free-tier server**, which puts the app to sleep after inactivity (cold start behavior).
+
+🔗 **Live Deployment:** https://mini-e-commerce-platform.netlify.app/
+
+Once the server wakes up, the app will respond normally on subsequent requests.
+
+Thanks for your patience!
 
